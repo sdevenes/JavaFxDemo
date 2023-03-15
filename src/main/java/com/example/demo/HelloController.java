@@ -13,6 +13,6 @@ public class HelloController {
     @FXML
     protected void onHelloButtonClick() {
         welcomeText.setText("Welcome to JavaFX Application!");
-        mylabel.setText("Helloooooo");
+        mylabel.setText("Hellooo000");
     }
 }
