@@ -8,17 +8,17 @@
   <items>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
          <children>
-            <BorderPane layoutX="37.0" layoutY="26.0" prefHeight="259.0" prefWidth="524.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-               <center>
-                  <ScrollPane prefHeight="231.0" prefWidth="798.0" BorderPane.alignment="CENTER">
+            <BorderPane fx:id="topPane" layoutX="37.0" layoutY="26.0" prefHeight="259.0" prefWidth="524.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <top>
+                  <ScrollPane fx:id="scrollPane" prefHeight="302.0" prefWidth="798.0" BorderPane.alignment="CENTER">
                      <content>
-                        <HBox fx:id="cardLayout" alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="1000.0" spacing="10.0">
+                        <HBox fx:id="cardLayout" alignment="CENTER_LEFT" prefHeight="287.0" prefWidth="1000.0" spacing="10.0">
                            <padding>
                               <Insets left="10.0" top="10.0" />
                            </padding></HBox>
                      </content>
                   </ScrollPane>
-               </center></BorderPane>
+               </top></BorderPane>
          </children></AnchorPane>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="42.0" prefWidth="598.0">
          <children>
@@ -40,7 +40,7 @@
                         <VBox alignment="CENTER" prefHeight="87.0" prefWidth="403.0" spacing="2.0">
                            <children>
                               <TextField fx:id="titleToRemove" prefHeight="25.0" prefWidth="329.0" promptText="Title of movie to remove" />
-                            <Button fx:id="RemoveButton" onAction="#onRemoveButtonClick" minWidth="72.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Remove" />
+                            <Button fx:id="RemoveButton" minWidth="72.0" mnemonicParsing="false" onAction="#onRemoveButtonClick" prefHeight="25.0" prefWidth="100.0" text="Remove" />
                            </children>
                         </VBox>
                      </children>

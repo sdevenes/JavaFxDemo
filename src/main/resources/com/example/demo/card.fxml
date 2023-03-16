@@ -2,21 +2,30 @@
 
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
-<VBox fx:id="box" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #B9E5FF;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.cardController">
+<VBox fx:id="box" alignment="BOTTOM_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="200.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.cardController">
    <children>
-      <ImageView fx:id="imgPlaceholder" fitHeight="125.0" fitWidth="162.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgPlaceholder" fitHeight="170.0" fitWidth="162.0" pickOnBounds="true" preserveRatio="true">
+         <effect>
+            <DropShadow height="33.46" radius="15.3125" width="29.79">
+               <color>
+                  <Color red="0.8421052694320679" green="0.2495126724243164" blue="0.7532163858413696" opacity="0.8399999737739563" />
+               </color>
+            </DropShadow>
+         </effect></ImageView>
       <VBox alignment="CENTER" prefHeight="144.0" prefWidth="365.0">
          <children>
-            <Label fx:id="titleLabel" alignment="CENTER" prefHeight="23.0" prefWidth="186.0" text="Label">
+            <Label fx:id="titleLabel" alignment="CENTER" prefHeight="23.0" prefWidth="186.0" text="Label" textFill="#220000">
                <font>
                   <Font name="System Bold" size="26.0" />
                </font>
             </Label>
-            <Label fx:id="yearLabel" alignment="CENTER" prefHeight="15.0" prefWidth="195.0" text="Label" />
+            <Label fx:id="yearLabel" alignment="CENTER" prefHeight="15.0" prefWidth="195.0" text="Label" textFill="#eeeeee" />
          </children>
       </VBox>
    </children>

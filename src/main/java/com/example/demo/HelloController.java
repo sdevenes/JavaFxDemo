@@ -4,10 +4,10 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
+import javafx.scene.layout.*;
 
 import java.io.File;
 import java.io.IOException;
@@ -26,6 +26,10 @@ public class HelloController implements Initializable {
     private TextField yearToAdd;
     @FXML
     private TextField titleToRemove;
+    @FXML
+    private BorderPane topPane;
+    @FXML
+    private ScrollPane scrollPane;
 
     private Biblio myBib;
 
@@ -34,6 +38,16 @@ public class HelloController implements Initializable {
     public void initialize(URL location, ResourceBundle resources)
     {
         System.out.println("Init helloController");
+
+        // Set background
+        Image image = new Image(getClass().getResourceAsStream("/img/neonBg.jpg"));
+        // new BackgroundSize(width, height, widthAsPercentage, heightAsPercentage, contain, cover)
+        BackgroundSize backgroundSize = new BackgroundSize(1.0, 1.0, true, true, false, false);
+        // new BackgroundImage(image, repeatX, repeatY, position, size)
+        BackgroundImage backgroundImage = new BackgroundImage(image, BackgroundRepeat.REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.CENTER, backgroundSize);
+
+        topPane.setBackground(new Background(backgroundImage));
+        scrollPane.setStyle("-fx-background: transparent;\n -fx-background-color: transparent");
 
         createBib();
 
