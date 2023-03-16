@@ -4,32 +4,49 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox alignment="CENTER" prefHeight="296.0" prefWidth="377.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-    </padding>
-   <Accordion>
-     <panes>
-       <TitledPane animated="false" text="untitled 1">
-         <content>
-           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-         </content>
-       </TitledPane>
-       <TitledPane animated="false" text="untitled 2">
-         <content>
-           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-         </content>
-       </TitledPane>
-       <TitledPane animated="false" text="untitled 3">
-         <content>
-           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-         </content>
-       </TitledPane>
-     </panes>
-   </Accordion>
-
-    <Label fx:id="welcomeText" />
-    <Label fx:id="mylabel" />
-    <Button onAction="#onHelloButtonClick" text="Hello!" />
-   <FlowPane prefHeight="34.0" prefWidth="194.0" />
-</VBox>
+<SplitPane dividerPositions="0.7721518987341772" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="397.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.HelloController">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+         <children>
+            <BorderPane fx:id="topPane" layoutX="37.0" layoutY="26.0" prefHeight="259.0" prefWidth="524.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <top>
+                  <ScrollPane fx:id="scrollPane" prefHeight="302.0" prefWidth="798.0" BorderPane.alignment="CENTER">
+                     <content>
+                        <HBox fx:id="cardLayout" alignment="CENTER_LEFT" prefHeight="287.0" prefWidth="1000.0" spacing="10.0">
+                           <padding>
+                              <Insets left="10.0" top="10.0" />
+                           </padding></HBox>
+                     </content>
+                  </ScrollPane>
+               </top></BorderPane>
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="42.0" prefWidth="598.0">
+         <children>
+            <SplitPane dividerPositions="0.4899497487437186" prefHeight="95.0" prefWidth="798.0">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="88.0" prefWidth="387.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="87.0" prefWidth="387.0" spacing="2.0">
+                           <children>
+                              <TextField fx:id="titleToAdd" promptText="Movie title" />
+                              <TextField fx:id="yearToAdd" layoutX="10.0" layoutY="13.0" promptText="Movie year" />
+                              <Button fx:id="AddButton" mnemonicParsing="false" onAction="#onAddButtonClick" prefHeight="25.0" prefWidth="100.0" text="Add" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="87.0" prefWidth="403.0" spacing="2.0">
+                           <children>
+                              <TextField fx:id="titleToRemove" prefHeight="25.0" prefWidth="329.0" promptText="Title of movie to remove" />
+                            <Button fx:id="RemoveButton" minWidth="72.0" mnemonicParsing="false" onAction="#onRemoveButtonClick" prefHeight="25.0" prefWidth="100.0" text="Remove" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+         </children></AnchorPane>
+  </items>
+</SplitPane>
