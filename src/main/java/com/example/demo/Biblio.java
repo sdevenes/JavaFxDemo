@@ -33,7 +33,7 @@ public class Biblio {
      */
     public void printCollection(){
         for (Movie item: this.movieCollection){
-            System.out.println(item.getTitle());
+            System.out.println(item);
         }
     }
 
@@ -51,9 +51,13 @@ public class Biblio {
      */
     public void removeMovie(String movieTitle){
         Movie movieToRemove = null;
+        System.out.println("Looking for movie title to remove:" + movieTitle);
+
         for (Movie item: this.movieCollection){
-            if (item.getTitle() == movieTitle) {
+            System.out.println(item.getTitle());
+            if (item.getTitle().equals(movieTitle)) {
                 movieToRemove = item;
+//                this.movieCollection.remove(item);
             }
         }
         if (movieToRemove != null){

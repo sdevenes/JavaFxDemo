@@ -26,10 +26,13 @@ public class cardController {
 
         titleLabel.setText(movie.getTitle());
         yearLabel.setText(Integer.toString(movie.getYear()));
+        imgPlaceholder.setImage(movie.getImg());
         //File file = new File("indianaJones.jpg");
         //System.out.println(file);
         //Image img = new Image(file.toURI().toString());
-        Image img = new Image(getClass().getResourceAsStream("/img/"+ movie.getImg()));
-        imgPlaceholder.setImage(img);
+//        if (movie.getImg().length() > 0) {
+//            Image img = new Image(getClass().getResourceAsStream("/img/" + movie.getImg()));
+//            imgPlaceholder.setImage(img);
+//        }
     }
 }

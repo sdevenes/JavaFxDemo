@@ -1,5 +1,7 @@
 package com.example.demo;
 
+import javafx.scene.image.Image;
+
 /**
  * Class representing a Movie
  */
@@ -7,7 +9,7 @@ public class Movie {
     protected String title;
     protected int rating;
     protected Actor[] actorList;
-    protected String img;
+    protected Image img;
     protected int year;
 
     /**
@@ -17,7 +19,7 @@ public class Movie {
      * @param img The cover image of the movie
      * @param year The release year of the movie
      */
-    public Movie(String title, Actor[] actorList, String img, int year){
+    public Movie(String title, Actor[] actorList, Image img, int year){
         this.title = title;
         this.actorList = actorList;
         this.img = img;
@@ -42,9 +44,9 @@ public class Movie {
 
     /**
      * Getter for the movie's cover image
-     * @return The filename of the movie's cover image
+     * @return The movie's cover image
      */
-    public String getImg(){
+    public Image getImg(){
         return this.img;
     }
 
