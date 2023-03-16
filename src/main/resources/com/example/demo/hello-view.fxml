@@ -4,32 +4,31 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox alignment="CENTER" prefHeight="296.0" prefWidth="377.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-    </padding>
-   <Accordion>
-     <panes>
-       <TitledPane animated="false" text="untitled 1">
-         <content>
-           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-         </content>
-       </TitledPane>
-       <TitledPane animated="false" text="untitled 2">
-         <content>
-           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-         </content>
-       </TitledPane>
-       <TitledPane animated="false" text="untitled 3">
-         <content>
-           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-         </content>
-       </TitledPane>
-     </panes>
-   </Accordion>
-
-    <Label fx:id="welcomeText" />
-    <Label fx:id="mylabel" />
-    <Button onAction="#onHelloButtonClick" text="Hello!" />
-   <FlowPane prefHeight="34.0" prefWidth="194.0" />
-</VBox>
+<SplitPane dividerPositions="0.8" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="300.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.HelloController">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+         <children>
+            <BorderPane layoutX="37.0" layoutY="26.0" prefHeight="259.0" prefWidth="524.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <center>
+                  <ScrollPane prefHeight="231.0" prefWidth="798.0" BorderPane.alignment="CENTER">
+                     <content>
+                        <HBox fx:id="cardLayout" alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="1000.0" spacing="10.0">
+                           <padding>
+                              <Insets left="10.0" top="10.0" />
+                           </padding></HBox>
+                     </content>
+                  </ScrollPane>
+               </center></BorderPane>
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="42.0" prefWidth="598.0">
+         <children>
+            <ButtonBar layoutX="260.0" layoutY="9.0" prefHeight="40.0" prefWidth="278.0">
+              <buttons>
+                  <Button mnemonicParsing="false" prefHeight="25.0" text="Button" />
+                  <Button mnemonicParsing="false" text="Button" />
+                <Button minWidth="72.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="156.0" text="Button" />
+              </buttons>
+            </ButtonBar>
+         </children></AnchorPane>
+  </items>
+</SplitPane>
